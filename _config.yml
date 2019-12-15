@@ -1,11 +1,11 @@
 # Site settings
-author: Jennifer Miller
-title: 
+author: Jennifer Lakshmi Miller
+title: Software Engineering A Talent I did not know I had
 header-img: img/home-bg.png
 email: jmiller@archersystems.us
-copyright_name: Jennifer Miller
+copyright_name: Jennifer Lakshmi Miller
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Journey towards Software Engineering
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  mumu2117
