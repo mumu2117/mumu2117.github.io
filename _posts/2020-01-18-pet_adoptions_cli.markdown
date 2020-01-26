@@ -6,10 +6,10 @@ permalink:  pet_adoptions_cli
 ---
 
 
-This blog is about my thought process, struggles, and, challenges while building my command line interface (CLI).
+This blog is about my thought process, struggles, and, challenges while building my command line interface (CLI) gem which was my frist Project at Flatiron School. Initially I planned on spending 2 weeks before deadline to work on it. 
 
-I fell ill and, it took away some time off my hands. I initially planned 2 weeks for completion. I had  week to finish and, was still down sick. I kind of thought I was going to fail. Till now I was able to finish my labs and lessons well in advance. 
-I decided to give it my all and, muster all the strength I could to get it done.  I decided to do something I love which is animal welfare. I am a huge proponent of animal adoption and, one day would love to start a shelter of my own that would be no kill and, would provide shelter to homeless animals. Having decided on it. I decided to base my CLI App on my favorite charity.
+I unexpectedly fell ill and, it took away some time off my hands. I initially planned 2 weeks for completion. I had  week to finish and, was still down sick. I kind of thought I was going to fail. Till now I was able to finish my labs and lessons well in advance.  Thsi taught me the valuable lesson on planning. For the next project I plan to finish way in advance. 
+I decided to give it my all and, muster all the strength I could to get it done.  I decided to do something I love which is animal welfare. I am a huge proponent of animal adoption and, one day would love to start a shelter of my own that would be no kill and, would provide shelter to homeless animals. Having decided on it. I decided to base my CLI App on an animal charity that is a no kill shelter. 
 
 I began by first setting up the local environment.  I debated about doing a local environment setup on Windows but, decided againist it.. I thought its now or never. Ruby was already on my Mac, so, I went on to setup the other packages.
 Once that was done. I started thinking of what files are needed in my file schema that I installed by using "Bundle gem Pet-Adoptions."  
@@ -20,7 +20,9 @@ I started thinking of the classes to include in my App. And decided on the follo
 2. Scraper.rb which would include the scraper classes responsible for scraping my website.
 3. Animal classes for creating each animal object.
 4. A class that would combine the scraping and, new object creation functionality.
-
+5. I wanted tu use OO Ruby. I loved the concepts in OO Ruby of using Macros to minimize the code. Metaprogramming to factor in the addition or deletion of attributes or properties of an object. 
+6. I also wanted to incorporate Class methods, Class modules, Class variables, Instance variables, instance methods. I had so much fun learning OO Ruby and, seeing how it can make our code more abstract I couldn't wait to use it. What can I say I am lazy and, would like any concepts that would minimize my code. Thus saving me from Corporal Tunnel in the future. 
+7. I also wanted to scrape a website using scraping tools like nokogiri and Open URI which we used along with css selectors to scrape various classes, and id's of div and, span elements in our labs. 
 
 
 This is how I visualized the program to work:
