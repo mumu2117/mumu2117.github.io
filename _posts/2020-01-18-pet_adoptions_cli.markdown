@@ -12,7 +12,7 @@ I fell ill and, it took away some time off my hands. I initially planned 2 weeks
 I decided to give it my all and, muster all the strength I could to get it done.  I decided to do something I love which is animal welfare. I am a huge proponent of animal adoption and, one day would love to start a shelter of my own that would be no kill and, would provide shelter to homeless animals. Having decided on it. I decided to base my CLI App on my favorite charity.
 
 I began by first setting up the local environment.  I debated about doing a local environment setup on Windows but, decided againist it.. I thought its now or never. Ruby was already on my Mac, so, I went on to setup the other packages.
-Once that was done. I started thinking of what files are needed in my file schema that I installed by using "Bundle gem Pet-Adopttions."  
+Once that was done. I started thinking of what files are needed in my file schema that I installed by using "Bundle gem Pet-Adoptions."  
 
 I started thinking of the classes to include in my App. And decided on the following schema in my lib/pet_adptions folder:
 
@@ -36,13 +36,21 @@ This is how I visualized the program to work:
 Now that I had an idea I started building the executable in Bin first. Then started coding my App starting with the CLI. 
 
 CLI:  I used a Constant called "BUDDIES," and, named my objects exactly, how I wanted them to show up. I used iteration each_with_index(1) to iterate over this constant.  I provided two placeholders in the itirate method: Number, and, buddy (which refers to the BUDDIES constant.) This allowed me to pass those two placeholders into a string based on the input of the user and, list the correct number and the choice of animal the user chose from the Pet constant. 
-Scraper: I used OO Ruby to build classes and then class methods (class methods start with self dot) to scrape the animal website to get the list of animal the user choose (for instance if it is a dog it would go to the dogs list page) and, then it would creat new animals from information obatined from those pages. I scraped the website using ruby gems Nokigiri to extract data from the website, and used Open Uri as well as CSS selectors to extract the Div, span, class selectors. It really made scraping fun and easy. The animals on the main adoption page were stored in a main Div class called rg-animal, so I itirated though the css selector usin the each iteration method. I used a hash to store the values scraped form the website such as age, breed,url, name from the main page of each animal. I then pushed the has value into an array which I stored in a variable which I could then call to give a list of the animal url and the features of that particular species of animal. Just to give you a birds eye view of how my first method in the scraper class flows.
+
+
+***Scraper Class:*** I used OO Ruby to build classes and then class methods (class methods start with self dot) to scrape the animal website to get the list of animal the user choose (for instance if it is a dog it would go to the dogs list page) and, then it would scrape date of animals from information obatined from those pages. The first scrape would only pull the Name, Age, Breed as listed on the page for that particular animal. I scraped the website using ruby gems Nokigiri to extract data from the website, and used Open Uri as well as CSS selectors to extract the Div, span, class selectors. It really made scraping fun and easy. The Scraper class takes in an argument of the species name, which is appended to the end of the Best Friends website url("buddies")
+
+The animals on the main adoption page were stored in a main Div class called rg-animal, so I itirated though the css selector using the each iteration method. I used a hash called "bud+features" to store the values scraped form the website such as age, breed,url, name from the main page of each animal. I then pushed the has value into an array which I stored in a variable called buds, which I could then call to give a list of the animal url and the features of that particular species of animal. Just to give you a birds eye view of how my first method in the scraper class flows.
 I built a second scraper method to scrape additioanl details from the individual animal name the user picks for adoption. This page has more details such as color, size, sex, description of that particular animal. 
-Class for the animals: I used OO ruby to list all the animals in the main class with attributes. Used metaprogramming to make sure that any change of attributes would be accounted for. And used inheritance to spin out each individual animal object class. The main file with the animal classes and methods has the list of attributes, and methods to create each animal object as well as add attributes. The invidual animal objects inherit from this class because they all share the same attributes, so, it would b repetitive to code the same old, same old.
 
-I created another animal class that would then bring together the scraper classes and the object creation classes to churn out the animals. In essence this was like the creator of the objects and, the ingredients were provided by the scraper class methods that scraped data from the website as well as the main animal class methods that helped create the individual animal object based on this data. I used the Class variable @@all as well as class method in each inherited animal class.
 
-Hope you enjoyed my blog. And hope I explained everything clearly. 
+***Adoptapet class***: I used OO ruby to list all the animals in the parent class, and incorporated all the methods to create objects, and add additional attributes in this class. Then I created each species as a Child class and, they inherited from the Parent class which is Adoptapet class. Since, they all shared the same attributes I included all the method in the parent class. Then using the DRY principle which I could have the child classes inherit their methods, and attributes from the parent class. This minimized my coding. Used metaprogramming to make sure that any change of attributes would be accounted for. 
+
+
+***Buddycount Class***: I created another animal class that would then bring together the scraper classes and the object creation classes to churn out the animals. In essence this was like the creator of the objects and, the ingredients were provided by the scraper class methods that scraped data from the website as well as the main animal class methods "adoptapet" that helped create the individual animal object based on this data. 
+
+
+
 
 
 
