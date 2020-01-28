@@ -21,7 +21,7 @@ I started thinking of the classes to include in my App. And decided on the follo
 3. Animal classes for creating each animal object.
 4. A class that would combine the scraping and, new object creation functionality.
 5. I wanted tu use OO Ruby. I loved the concepts in OO Ruby of using Macros to minimize the code. Metaprogramming to factor in the addition or deletion of attributes or properties of an object. 
-6. I also wanted to incorporate Class methods, Class modules, Class variables, Instance variables, instance methods. I had so much fun learning OO Ruby and, seeing how it can make our code more abstract I couldn't wait to use it. What can I say I am lazy and, would like any concepts that would minimize my code. Thus saving me from Corporal Tunnel in the future. 
+6. I also wanted to incorporate Class methods, Class modules, Class variables, Instance variables, instance methods. I had so much fun learning OO Ruby and, seeing how it can make our code more abstract I couldn't wait to use it. What can I say I am lazy and, would like any concepts that would minimize my code. Thus saving me from Corporal Tunnel in the future. That is one major goal of design in object oriented programming––the writing of code that accommodates future change and doesn't require a lot of modification, even as it grows.
 7. I also wanted to scrape a website using scraping tools like nokogiri and Open URI which we used along with css selectors to scrape various classes, and id's of div and, span elements in our labs. 
 
 
