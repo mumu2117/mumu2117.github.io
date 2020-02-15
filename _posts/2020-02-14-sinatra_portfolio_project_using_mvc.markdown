@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Sinatra Portfolio Project using MVC"
-date:       2020-02-15 02:52:58 +0000
+date:       2020-02-14 21:52:59 -0500
 permalink:  sinatra_portfolio_project_using_mvc
 ---
 
