@@ -25,8 +25,11 @@ I created helpermethods to include verification in my app. Such as if the user i
 1. #is_logged_in? checks to see if the session[:user_id] has been set and returns true if it has, indicating that a user is logged in
 2. #current_user finds the User object based on the ID that has been set in session[:user_id] and is used to compare if the user that is currently logged in matched with an experience's user.
 
-I did that using Sinatra Filters:
+ I  utilized Sinatra to perform a universal route check to ensure that the user accessing the route is logged in. Now anytime an /experiences/ route was accessed, my app would first execute the code in the filter block. If the user was not logged in, it would redirect the user to the login page. If the user was logged in, it would continue on with the code in the route that they requested.
 
+By repeating this filter in each of the controllers, I secured each page and ensured that they could not be accessed or changed by users unless they are logged in.
+
+```
 class ExperiencesController < ApplicationController
   before '/experiences/*' do
     if !is_logged_in?
@@ -34,6 +37,7 @@ class ExperiencesController < ApplicationController
       redirect to '/login'
     end
   end
+```
 	
 	
 	
@@ -42,7 +46,7 @@ I used the name has_secure_password in my User model. I used bcrypt gem to secur
 
 This is how the two files work. These files are under the "View" folder which is the V of the MVC model, under a file in View. Once logged in a user can add a New Experience (which is the create file create),edit an Experience (/edit), or Add a New Experience from Another User  (which is why we have the create_from_user file under).  
 
-Finally, I did my styling using, CSS and, had a lot of fun with it. I use layout.erb to incorporate the DRY principle of "yield." 
+Finally, I did my styling using, CSS and, had a lot of fun with it. I used layout.erb to incorporate the DRY principle of "yield." 
 In layout.erb, we need to add a yield wherever we want the other page content to be loaded in this case "index.erb." 
 
 I had tons of fun doing this project and am excited to see what we have waiting on our rails project.
