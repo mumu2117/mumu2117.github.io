@@ -16,7 +16,7 @@ category class also has {name}, and has_many experiences and many users through 
 Since experiences can have many categories, and categories can have many experiences. I created a join table between catergories and experiences. I then created migrations to each table. Rake and, pry console were my best buddies in that process. Then i used the "M" in MVC to create my model classes. Each model and class inherited from `ActiveRecord::Base` and used belongs_to, has_many or has_many, through depending on the logic from the table creations earlier. 
 
 
-An crucial aspect of my app is the ability for users to create an account to maintain their goals, log in and out of their account, and view other users' Bucket List's to get inspiration (but not make changes). 
+An crucial aspect of my app is the ability for users to create an account to maintain their goals, log in and out of their account, and view other users Travel Goals to get inspiration (but not make changes). 
 
 I first started with sessions. I aded enable :sessions to my ApplicationController, and this in turn enabled me to maintain a user's ID in the session hash. This enables verification whether the user is logged in or out.  Blocks a user from accessing other users pages, or editing/deleting their info It enables a user to create travel goals, and, edit their own goals if they are logged in. If they are not logged in, it redirects them to the login page. 
 
