@@ -6,7 +6,7 @@ permalink:  sinatra_portfolio_project_using_mvc
 ---
 
 
-I was excited about building my first WebApp using ActiveRecord for my associations and Sinatra for my routes, Rack for my server, and, html and, Css for page structure, and styling. For this project we used a concept called MVC structure for Web Applications. 
+I was excited about building my first WebApp using ActiveRecord for my associations and Sinatra for my routes, Rack for my server, and, html and, Css for page structure, and styling. For this project we used a concept called MVC structure for Web Applications.  Keeping our code organized is crucial when developing complex applications. This concept is called separation of concerns and single responsibility. Each file in our application will have a different responsibility and we'll keep these responsibilities split up into reasonable chunks.  With MVC each folder ha a different responsibitlity. 
 
 I decided to build a web app where folks can keep track of their travel goals. I used categories, travel experiences, and, countries as the three objects I am going to build my app around.
 
